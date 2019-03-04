@@ -4,7 +4,7 @@
 function hello(name) {
     console.log(`Hello, ${name}!`);
 }
-hello('Mustache');
+// hello('Mustache');
 
 // Hello, you pt 2
 // modify program such that if no name is given, it will print hello world.
@@ -12,7 +12,7 @@ hello('Mustache');
 function hello(name='world') {
     console.log(`Hello, ${name}!`);
 }
-hello();
+// hello();
 
 // Madlib
 // Write a madlib function, which is given a name and a subject. It will return(not print) a new string: (name)'s favorite subject in school is (subject).
@@ -20,7 +20,7 @@ hello();
 function madlib(name, subject) {
     return `${name}'s favorite subject in school is ${subject}.`
 }
-console.log(madlib('Matt', 'Computer Lab'))
+// console.log(madlib('Matt', 'Computer Lab'))
 
 // Tip Calculator
 // Write a function tipAmount that is given the bill amount and the level of service (one of good, fair and poor) and returns the dollar amount for the tip. Based on:
@@ -39,8 +39,8 @@ function tipAmount(billAmount, serviceLevel) {
     }
     return tip;
 }
-console.log(tipAmount(100, 'good'));
-console.log(tipAmount(40, 'fair'));
+// console.log(tipAmount(100, 'good'));
+// console.log(tipAmount(40, 'fair'));
 
 // Tip Calculator 2
 // Write a function totalAmount that takes the same arguments as tipAmount except it returns the total as the tip amount plus the bill amount. This function may make use of tipAmount as a sub-task.
@@ -49,8 +49,8 @@ function totalAmount(billAmount, serviceLevel) {
     let total = tipAmount(billAmount, serviceLevel) + billAmount;
     return total;
 }
-console.log(totalAmount(100, 'good'));
-console.log(totalAmount(40, 'fair'));
+// console.log(totalAmount(100, 'good'));
+// console.log(totalAmount(40, 'fair'));
 
 // Tip Calculator 3
 // Write a function splitAmount that takes the bill amount and the level of service, and the number of people to split the bill between. It will return the final amount for each person.
