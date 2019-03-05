@@ -107,7 +107,7 @@ function decipher(string, offset) {
     return newSentence;
 }
 
-console.log(decipher('Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar', 13))
+// console.log(decipher('Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar', 13))
 
 // Leetspeak
 // Write a function leetspeak which is given a string, and returns the leetspeak equivalent of the string. To convert text to its leetspeak version, make the following substitutions:
