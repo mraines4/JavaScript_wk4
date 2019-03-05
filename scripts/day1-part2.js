@@ -71,20 +71,20 @@ function cipher(string, offset) {
     // const alph = 'abcdefghijklmnopqrstuvwxyz '
     let newSentence = '';
     for (let i = 0; i < string.length; i++) {
-        let letter = string[i]
+        let char = string[i]
         let ascii = string.charCodeAt(i);
         // return ascii;
         if ((ascii) >=65 && (ascii) <= 90) {
-            letter = String.fromCharCode(((ascii - 65 + offset) % 26) + 65);
+            char = String.fromCharCode(((ascii - 65 + offset) % 26) + 65);
         } else if ((ascii) >=97 && (ascii) <= 122) {
-            letter = String.fromCharCode(((ascii - 97 + offset) % 26) + 97);
+            char = String.fromCharCode(((ascii - 97 + offset) % 26) + 97);
         }
-        newSentence += letter;
+        newSentence += char;
 
     }
     return newSentence;
 }
-// console.log(cipher('Genius without education is like silver in the mine', 13));
+console.log(cipher('Genius without education is like silver in the mine', 13));
 
 // Caesar Cipher 2
 // Write a function decipher which is given a string, an offset, and returns the original message.
@@ -93,21 +93,21 @@ function decipher(string, offset) {
     // const alph = 'abcdefghijklmnopqrstuvwxyz '
     let newSentence = '';
     for (let i = 0; i < string.length; i++) {
-        let letter = string[i]
+        let char = string[i]
         let ascii = string.charCodeAt(i);
         // return ascii;
         if ((ascii) >=65 && (ascii) <= 90) {
-            letter = String.fromCharCode(((ascii - 65 + offset) % 26) + 65);
+            char = String.fromCharCode(((ascii - 65 + offset) % 26) + 65);
         } else if ((ascii) >=97 && (ascii) <= 122) {
-            letter = String.fromCharCode(((ascii - 97 + offset) % 26) + 97);
+            char = String.fromCharCode(((ascii - 97 + offset) % 26) + 97);
         }
-        newSentence += letter;
+        newSentence += char;
 
     }
     return newSentence;
 }
 
-// console.log(decipher('Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar', 13))
+console.log(decipher('Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar', 13))
 
 // Leetspeak
 // Write a function leetspeak which is given a string, and returns the leetspeak equivalent of the string. To convert text to its leetspeak version, make the following substitutions:
