@@ -43,3 +43,37 @@ const addressBook = {
         city: 'Atlanta'
     }
 };
+
+
+// write a function that accepts an address book and prints all of the entries
+
+function printAll(book) {
+    // grab all the keys
+    const allTheKeys = Object.keys(book);
+
+    // using each key, look up the entry
+    allTheKeys.forEach(function (stringKey) {
+        // look up stringKey in book
+        let entry = book[stringKey];
+        // print the entry
+        console.log(entry);
+    });
+}
+// printAll(addressBook);
+
+
+// write a second function that accepts an address book and a key name and prints only that piece of contact info
+
+function printItemInAddressBook(book, item) {
+    // grab all the keys
+    const allTheKeys = Object.keys(book);
+
+    // using each key, look up the entry
+    allTheKeys.forEach(function (stringKey) {
+        // look up stringKey in book
+        let entry = book[stringKey];
+        // print the entry
+        console.log(entry[item]);
+    });
+}
+printItemInAddressBook(addressBook, 'city');
