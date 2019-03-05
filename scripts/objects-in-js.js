@@ -31,4 +31,15 @@ function transl33t(originalString) {
     return result;
 }
 
-const addressBook = 
+const addressBook = {
+    DigitalCrafts: {
+        phone: '404-123-1234', 
+        address: '4323 Piedmont', 
+        city: 'Atlanta'
+    },
+    'Chris Aquino': {
+        phone: '404-555-1234', 
+        address: '4321 Piedmont', 
+        city: 'Atlanta'
+    }
+};
