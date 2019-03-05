@@ -202,15 +202,51 @@ function positiveNumbers (arr) {
 // Write a function matrixAdd which is given two two-dimensional arrays, and returns a new two-dimensional array containing their matrix sum.
 
 function matrixAdd (matrix) {
-
+    let arr1a = [matrix[0][0]];
+    let arr1b = [matrix[0][1]];
+    let arr2a = [matrix[1][0]];
+    let arr2b = [matrix[1][1]];
+    console.log(arr1a);
+    console.log(arr1b);
+    console.log(arr2a);
+    console.log(arr2b);
+    let listFull = [];
+    let listFinal = [];
+    for (let i = 0; i < arr1a.length; i++) {
+        listFull.push(arr1a[i][0] + arr2a[i][0]);
+        listFull.push(arr1a[i][1] + arr2a[i][1]);
+        listFull.push(arr1b[i][0] + arr2b[i][0]);
+        listFull.push(arr1b[i][1] + arr2b[i][1]);
+    }
+    console.log(listFull)
+    listFinal = [[listFull[0], listFull[1]], [listFull[2], listFull[3]]];
+    console.log(listFinal)
 }
 // matrixAdd([[[1, 3], [2, 4]], [[5, 2], [1, 0]]]);
 
 // Matrix Multiplication
 // Write a function matrixMultiply which is given two two-dimensional arrays - you can assume the matricies are of size 2x2. It will return the result of matrix multiplication between the two given matricies.
 
-function matrixMultiply (matrix) {
-
+function matrixMultiply (matrix1, matrix2) {
+    let row = 0;
+    let col = 0;
+    let row2 = 0;
+    let result = [[0, 0], [0, 0]];
+    
+    while(row < 2){
+        // result[row] = [];
+        while(col < 2){
+            while(row2 < 2){
+                result[row][col] += matrix1[row][row2] * matrix2[row2][col];
+                row2++;
+            }
+            row2 = 0;
+            col++;
+        }
+        col = 0;
+        row++;
+    }
+    console.log(result);
 }
 // matrixMultiply([[2, 4], [3, 4]], [[5, 2], [3, 1]]);
 
@@ -251,24 +287,38 @@ function rockPaperScissors (player1, player2) {
 // return null if neither makes a row
 
 function ticTacToe (array) {
+    let col1 = [];
+    let col2 = [];
+    let col3 = [];
     for (let i = 0; i < array.length; i++) {
-        if (array[i][0] === array[i][1] === array[i][2]) {
-            console.log(array[i]);
+        col1.push(array[i][0]);
+        col2.push(array[i][1]);
+        col3.push(array[i][2]);
+        if (array[i][0] === array[i][1] && array[i][1]=== array[i][2]) {
+            console.log(array[i][0]);
         }
     }
+    if (col1[0] === col1[1] && col1[1] === col1[2]) {
+        console.log(col1[0]);
+    } else if (col2[0] === col2[1] && col2[1] === col2[2]) {
+        console.log(col2[0]);
+    } else if (col3[0] === col3[1] && col3[1] === col3[2]) {
+        console.log(col3[0]);
+    }
 }
-ticTacToe([
-    ['O', 'O', 'O'],
-    ['X', null, 'X'],
-    [null, 'X', null]
-    ]);
-ticTacToe([
-    ['O', 'X', 'O'],
-    ['O', 'X', null],
-    [null, 'X', null]
-    ]);
-ticTacToe([
-    ['O', 'X', 'O'],
-    ['O', 'O', null],
-    [null, 'X', 'X']
-    ]);
+
+// ticTacToe([
+//     ['O', 'O', 'O'],
+//     ['X', null, 'X'],
+//     [null, 'X', null]
+//     ]);
+// ticTacToe([
+//     ['O', 'X', 'O'],
+//     ['O', 'X', null],
+//     [null, 'X', null]
+//     ]);
+// ticTacToe([
+//     ['O', 'X', 'O'],
+//     ['O', 'O', null],
+//     [null, 'X', 'X']
+//     ]);
